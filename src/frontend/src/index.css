@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Brand palette - OKLCH L C H */
+    --navy: 0.23 0.093 254;
+    --navy-mid: 0.3 0.085 252;
+    --teal: 0.61 0.101 190;
+    --teal-light: 0.75 0.09 190;
+    --cta: 0.7 0.172 50;
+    --cta-hover: 0.65 0.18 50;
+    --cream: 0.95 0.018 75;
+    --cream-dark: 0.9 0.022 75;
+
+    /* Tile accent colors */
+    --tile-blue: 0.41 0.12 255;
+    --tile-teal: 0.61 0.099 191;
+    --tile-orange: 0.68 0.17 52;
+    --tile-purple: 0.46 0.18 290;
+    --tile-green: 0.58 0.15 155;
+
+    /* shadcn semantic tokens */
+    --background: 1 0 0;
+    --foreground: 0.145 0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.145 0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.145 0 0;
+    --primary: 0.61 0.101 190;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.97 0 0;
+    --secondary-foreground: 0.205 0 0;
+    --muted: 0.97 0 0;
+    --muted-foreground: 0.556 0 0;
+    --accent: 0.95 0.018 75;
+    --accent-foreground: 0.23 0.093 254;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.922 0 0;
+    --input: 0.922 0 0;
+    --ring: 0.61 0.101 190;
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.23 0.093 254;
+    --sidebar-foreground: 1 0 0;
+    --sidebar-primary: 0.61 0.101 190;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.3 0.085 252;
+    --sidebar-accent-foreground: 1 0 0;
+    --sidebar-border: 1 0 0 / 15%;
+    --sidebar-ring: 0.61 0.101 190;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--navy)) 0%,
+      oklch(var(--teal)) 100%
+    );
+  }
+  .gradient-cta-band {
+    background: linear-gradient(
+      135deg,
+      oklch(var(--navy)) 0%,
+      oklch(var(--navy-mid)) 60%,
+      oklch(var(--teal)) 100%
+    );
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, oklch(var(--teal-light)) 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
